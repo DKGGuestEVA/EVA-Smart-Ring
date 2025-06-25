@@ -20,7 +20,7 @@ const Footer = () => {
     ],
     company: [
       { label: 'About Us', href: '#' },
-      { label: 'Blog', href: '#' },
+      { label: 'Blog', href: '/research-hub' },
       { label: 'Careers', href: '#' },
       { label: 'Press', href: '#' }
     ],
@@ -176,7 +176,7 @@ const Footer = () => {
           <div className="flex flex-col lg:flex-row justify-between items-center space-y-4 lg:space-y-0">
             {/* Copyright */}
             <div className="font-body text-gray-300 text-sm">
-              © {currentYear} WellnessRing. All rights reserved.
+              © {currentYear} SmartRing. All rights reserved.
             </div>
 
             {/* Social Links */}

@@ -20,7 +20,7 @@ const ProductDetailsPreOrder = () => {
     price: 3499,
     originalPrice: 7499,
     discount: 25,
-    availability: 'Pre-order - Ships March 2024',
+    availability: 'Pre-order - Ships March 2025',
     rating: 4.8,
     reviewCount: 1240,
     description: `The WellnessRing Pro is a revolutionary wearable device that combines cutting-edge biometric sensors with advanced AI to provide real-time emotional intelligence insights. Designed for the modern wellness enthusiast, this sleek ring monitors your physiological responses and translates them into actionable emotional awareness data.
@@ -188,6 +188,8 @@ Built with medical-grade sensors and a titanium body, the WellnessRing Pro offer
           </div>
         </div>
 
+        
+
         {/* Detailed Sections */}
         <div className="mt-16 space-y-16">
           {/* Product Description */}
@@ -199,6 +201,24 @@ Built with medical-grade sensors and a titanium body, the WellnessRing Pro offer
               <p className="mb-4">{productData.description}</p>
             </div>
           </section>
+          {/* <div className="relative"> */}
+            <div className="relative z-10 max-w-2xl mx-auto"> {/* Increased max width */}
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary to-secondary rounded-full blur-3xl opacity-20 scale-110"></div>
+                <div className="relative bg-white rounded-2xl p-0 shadow-soft-elevation-3">
+                  <video
+                    src="./assets/videos/smartringbg.mp4"
+                    className="w-full h-[380px] rounded-2xl object-cover" // Increased height
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    poster="/assets/images/your-poster-image.jpg"
+                  />
+                </div>
+              </div>
+            </div>
+          
 
           {/* Technical Specifications */}
           <ProductSpecs specifications={productData.specifications} features={productData.features} />

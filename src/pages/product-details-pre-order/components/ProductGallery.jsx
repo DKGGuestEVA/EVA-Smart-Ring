@@ -10,29 +10,36 @@ const ProductGallery = () => {
     {
       id: 1,
       url: 'https://i5.walmartimages.com/seo/Smart-Ring-Fitness-Ring-Smart-Rings-for-Men-Women-IP68-Tracking-Ring-with-Pedometer-Calories-Sleep-Smart-Ring-Android-IOS-Warehouse-Clearance_1be6cea6-0938-4648-b546-ea9ee9070a00.109137bf67b4e68c0fc33a558a1892d5.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF=crop',
+      alt: 'SmartRing Pro - video',
+      type: 'main',
+      videoUrl: './assets/videos/smartringbg.mp4' // <-- Add your video URL here
+    },
+    {
+      id: 2,
+      url: 'https://i5.walmartimages.com/seo/Smart-Ring-Fitness-Ring-Smart-Rings-for-Men-Women-IP68-Tracking-Ring-with-Pedometer-Calories-Sleep-Smart-Ring-Android-IOS-Warehouse-Clearance_1be6cea6-0938-4648-b546-ea9ee9070a00.109137bf67b4e68c0fc33a558a1892d5.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF=crop',
       alt: 'WellnessRing Pro - Front View',
       type: 'main'
     },
     {
-      id: 2,
+      id: 3,
       url: 'https://image.made-in-china.com/226f3j00sulMzgenfmcE/Fashion-Multi-Functions-Sports-Rose-Gold-Silver-Black-Golden-NFC-Smart-Ring-with-Bluetooth-for-Ios-and-Android-Phone.webp',
       alt: 'Ring Pro - Side Profile',
       type: 'detail'
     },
     {
-      id: 3,
+      id: 4,
       url: 'https://www.colmi.info/cdn/shop/files/COLMI_R09_Smart_ring_Advanced_Multi-Sensor_Technology_1.jpg?v=1732861875&width=1500',
       alt: 'WellnessRing Pro - Charging Dock',
       type: 'accessory'
     },
     {
-      id: 4,
+      id: 5,
       url: './assets/images/Overviewimage.png',
       alt: 'WellnessRing Pro - App Interface',
       type: 'app'
     },
     {
-      id: 5,
+      id: 6,
       url: './assets/images/Ringapp.png',
       alt: 'WellnessRing Pro - Lifestyle Shot',
       type: 'lifestyle'
@@ -55,14 +62,26 @@ const ProductGallery = () => {
     <div className="space-y-4">
       {/* Main Image Display */}
       <div className="relative aspect-square bg-surface rounded-organic-lg overflow-hidden group">
-        <Image
-          src={productImages[currentImageIndex].url}
-          alt={productImages[currentImageIndex].alt}
-          className={`w-full h-full object-cover gentle-transition cursor-zoom-in ${
-            isZoomed ? 'scale-150' : 'scale-100'
-          }`}
-          onClick={toggleZoom}
-        />
+        {productImages[currentImageIndex].videoUrl ? (
+          <video
+            src={productImages[currentImageIndex].videoUrl}
+            controls
+            className={`w-full h-full object-cover gentle-transition cursor-zoom-in ${
+              isZoomed ? 'scale-150' : 'scale-100'
+            }`}
+            poster={productImages[currentImageIndex].url}
+            onClick={toggleZoom}
+          />
+        ) : (
+          <Image
+            src={productImages[currentImageIndex].url}
+            alt={productImages[currentImageIndex].alt}
+            className={`w-full h-full object-cover gentle-transition cursor-zoom-in ${
+              isZoomed ? 'scale-150' : 'scale-100'
+            }`}
+            onClick={toggleZoom}
+          />
+        )}
         
         {/* Navigation Arrows */}
         <button
@@ -119,7 +138,8 @@ const ProductGallery = () => {
       {/* Image Type Indicators */}
       <div className="flex flex-wrap gap-2">
         {[
-          { type: 'main', label: 'Product', icon: 'Package' },
+          { type: 'main', label: 'product video', icon: 'Package' },
+          { type: 'main', label: 'product', icon: 'Package' },
           { type: 'detail', label: 'Details', icon: 'Eye' },
           { type: 'accessory', label: 'Accessories', icon: 'Plus' },
           { type: 'app', label: 'App', icon: 'Smartphone' },

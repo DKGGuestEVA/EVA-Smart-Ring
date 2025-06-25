@@ -182,7 +182,7 @@ const DeveloperResearchHub = () => {
 
   const roadmapItems = [
     {
-      quarter: "Q1 2024",
+      quarter: "Q1 2025",
       status: "completed",
       items: [
         "Cultural bias detection framework",
@@ -191,7 +191,7 @@ const DeveloperResearchHub = () => {
       ]
     },
     {
-      quarter: "Q2 2024",
+      quarter: "Q2 2025",
       status: "in-progress",
       items: [
         "Advanced empathy algorithms",
@@ -200,7 +200,7 @@ const DeveloperResearchHub = () => {
       ]
     },
     {
-      quarter: "Q3 2024",
+      quarter: "Q3 2025",
       status: "planned",
       items: [
         "Real-time cultural context switching",
@@ -209,7 +209,7 @@ const DeveloperResearchHub = () => {
       ]
     },
     {
-      quarter: "Q4 2024",
+      quarter: "Q4 2025",
       status: "planned",
       items: [
         "Global cultural wellness database",
