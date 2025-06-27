@@ -11,7 +11,7 @@ import AchievementBadges from './components/AchievementBadges';
 
 const UserDashboardWellnessOverview = () => {
   const [currentTime, setCurrentTime] = useState(new Date());
-  const [userName] = useState('Sarah');
+  const [userName] = useState('EVA');
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -151,11 +151,14 @@ const UserDashboardWellnessOverview = () => {
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
             <div className="mb-4 sm:mb-0">
               <h1 className="font-heading font-bold text-2xl lg:text-3xl text-text-primary mb-2">
-                Welcome back, {userName}! 👋
-              </h1>
-              <p className="font-body text-text-secondary">
-                {formatDate(currentTime)} • {formatTime(currentTime)}
-              </p>
+  Welcome back to {userName}! 👋
+</h1>
+<p className="text-base lg:text-lg text-gray-1200 mb-3">
+  Your health data is synced and ready.
+</p>
+<p className="font-body text-text-secondary">
+  {formatDate(currentTime)} • {formatTime(currentTime)}
+</p>
             </div>
             <div className="flex items-center space-x-4">
               <div className="hidden sm:flex items-center space-x-2 px-4 py-2 bg-background rounded-organic border border-border-light">
