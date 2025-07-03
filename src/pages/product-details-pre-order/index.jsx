@@ -206,15 +206,15 @@ Built with medical-grade sensors and a titanium body, the WellnessRing Pro offer
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary to-secondary rounded-full blur-3xl opacity-20 scale-110"></div>
                 <div className="relative bg-white rounded-2xl p-0 shadow-soft-elevation-3">
-                  <video
-                    src="./assets/videos/smartringbg.mp4"
-                    className="w-full h-[380px] rounded-2xl object-cover" // Increased height
+                  {/* <video
+                    src="./assets/videos/ringvideo.mp4"
+                    className="w-full h-[620px] rounded-2xl object-cover" // Increased height
                     autoPlay
                     loop
                     muted
                     playsInline
                     poster="/assets/images/your-poster-image.jpg"
-                  />
+                  /> */}
                 </div>
               </div>
             </div>

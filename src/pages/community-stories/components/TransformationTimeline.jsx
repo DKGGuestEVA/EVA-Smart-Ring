@@ -174,7 +174,7 @@ const TransformationTimeline = () => {
           <div className="flex space-x-4 p-2 bg-background rounded-brand shadow-gentle">
             {timelineStories.map((story, index) => (
               <button
-                key={index}
+                key={index}                                           
                 onClick={() => setSelectedStory(index)}
                 className={`flex items-center space-x-3 px-4 py-3 rounded-brand-sm transition-whisper ${
                   selectedStory === index

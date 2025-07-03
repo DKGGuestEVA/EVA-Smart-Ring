@@ -153,55 +153,41 @@ const HowItWorks = () => {
       <section className="px-4 sm:px-6 lg:px-8 mb-8">
         <div className="max-w-7xl mx-auto">
           <div className="bg-surface/80 backdrop-blur-gentle rounded-brand p-6 shadow-gentle">
-            <div className="flex flex-col lg:flex-row items-center justify-between space-y-4 lg:space-y-0">
-              <div className="flex items-center space-x-3">
-                {/* <div 
-                  id="cultural-indicator"
-                  className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center breathing"
+            <div className="flex flex-col lg:flex-row gap-8">
+              <div className="flex-1 text-center lg:text-left">
+                <h2 className="font-heading text-2xl font-bold text-text-primary mb-2">
+                  Secure Intelligence for Your Wellness Journey
+                </h2>
+                <p className="text-text-secondary text-base max-w-3xl mx-auto lg:mx-0">
+                  A revolutionary AI health companion that understands you — it talks to you, reads your body through a smart ring, and gives real-time tips to improve your mind and body. Built with strong data privacy and medical-grade security, it’s the future of personal healthcare: proactive, personalized, and always with you — safely.
+                </p>
+              </div>
+              <div className="flex-1 text-center lg:text-left">
+                <h2 className="font-heading text-2xl font-bold text-text-primary mb-2">
+                  Meet Your AI-Powered Health Ally
+                </h2>
+                <p className="text-text-secondary text-base max-w-3xl mx-auto lg:mx-0">
+                  A revolutionary AI health companion that understands you — it talks to you, reads your body through a smart ring, and gives real-time tips to improve your mind and body.
+                  It’s the future of personal healthcare: proactive, personalized, and always with you.
+                </p>
+              </div>
+            </div>
+            
+            <div className="flex flex-wrap gap-2 mt-6">
+              {culturalLenses.map((lens) => (
+                <button
+                  key={lens.id}
+                  onClick={() => handleCulturalLensChange(lens.id)}
+                  className={`flex items-center space-x-2 px-4 py-2 rounded-brand-sm transition-cultural whisper-ripple ${
+                    culturalLens === lens.id
+                      ? `bg-${lens.color}/20 text-${lens.color} shadow-gentle`
+                      : 'bg-background text-text-secondary hover:text-text-primary hover:bg-primary/10'
+                  }`}
                 >
-                  <Icon name="Globe" size={24} className="text-white" />
-                </div>
-                <div>
-                  <h3 className="font-heading font-semibold text-text-primary">Cultural Lens</h3>
-                  <p className="text-sm text-text-secondary">See how AI adapts to different cultural contexts</p>
-                </div> */}
-                {/* 💡 AI Health Companion Description */}
-        <div className="text-center lg:text-left">
-          <h2 className="font-heading text-2xl font-bold text-text-primary mb-2">
-            Secure Intelligence for Your Wellness Journey
-          </h2>
-          <p className="text-text-secondary text-base max-w-3xl">
-            A revolutionary AI health companion that understands you — it talks to you, reads your body through a smart ring, and gives real-time tips to improve your mind and body. Built with strong data privacy and medical-grade security, it’s the future of personal healthcare: proactive, personalized, and always with you — safely.
-          </p>
-        </div>
-        {/* 💡 AI Health Companion Prompt */}
-        <div className="text-center lg:text-left">
-          <h2 className="font-heading text-2xl font-bold text-text-primary mb-2">
-            Meet Your AI-Powered Health Ally
-          </h2>
-          <p className="text-text-secondary text-base max-w-3xl">
-            A revolutionary AI health companion that understands you — it talks to you, reads your body through a smart ring, and gives real-time tips to improve your mind and body.
-            It’s the future of personal healthcare: proactive, personalized, and always with you.
-          </p>
-        </div>
-              </div>
-              
-              <div className="flex flex-wrap gap-2">
-                {culturalLenses.map((lens) => (
-                  <button
-                    key={lens.id}
-                    onClick={() => handleCulturalLensChange(lens.id)}
-                    className={`flex items-center space-x-2 px-4 py-2 rounded-brand-sm transition-cultural whisper-ripple ${
-                      culturalLens === lens.id
-                        ? `bg-${lens.color}/20 text-${lens.color} shadow-gentle`
-                        : 'bg-background text-text-secondary hover:text-text-primary hover:bg-primary/10'
-                    }`}
-                  >
-                    <Icon name={lens.icon} size={16} />
-                    <span className="font-medium text-sm">{lens.name}</span>
-                  </button>
-                ))}
-              </div>
+                  <Icon name={lens.icon} size={16} />
+                  <span className="font-medium text-sm">{lens.name}</span>
+                </button>
+              ))}
             </div>
           </div>
         </div>

@@ -12,7 +12,7 @@ const ProductGallery = () => {
       url: 'https://i5.walmartimages.com/seo/Smart-Ring-Fitness-Ring-Smart-Rings-for-Men-Women-IP68-Tracking-Ring-with-Pedometer-Calories-Sleep-Smart-Ring-Android-IOS-Warehouse-Clearance_1be6cea6-0938-4648-b546-ea9ee9070a00.109137bf67b4e68c0fc33a558a1892d5.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF=crop',
       alt: 'SmartRing Pro - video',
       type: 'main',
-      videoUrl: './assets/videos/smartringbg.mp4' // <-- Add your video URL here
+      videoUrl: './assets/videos/ringvideo.mp4' // <-- Add your video URL here
     },
     {
       id: 2,
